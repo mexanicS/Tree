@@ -1,0 +1,18 @@
+.tree-node {
+    margin-left: 20px;
+    padding: 5px;
+    border-left: 1px solid #000000;
+}
+
+.tree-node .controls {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.tree-node .controls button {
+    margin-right: 5px;
+}
+
+.tree-node .children {
+    margin-left: 20px;
+}

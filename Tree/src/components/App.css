@@ -1,0 +1,12 @@
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.app h1 {
+  margin-bottom: 20px;
+}
+
+.app button {
+  margin-bottom: 20px;
+}
