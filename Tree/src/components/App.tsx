@@ -7,24 +7,19 @@ type TreeNodeType = {
   name: string;
   children: TreeNodeType[];
 };
-const initialTrees: TreeNodeType = {
-  id: 'root',
-  name: 'Root',
-  children: [],
-};
 
-const initialTree: TreeNodeType = {
+const treeRoot: TreeNodeType = {
   id: 'root',
   name: 'Root',
   children: [],
 };
 
 const App: React.FC = () => {
-  const [tree, setTree] = useState<TreeNodeType>(initialTree);
+  const [tree, setTree] = useState<TreeNodeType>(treeRoot);
 
   const addNode = (parentId: string, name: string) => {
     const newNode: TreeNodeType = {
-      id: `${parentId}-${Date.now()}`,
+      id: `node-${Date.now()}`,
       name,
       children: [],
     };
@@ -68,8 +63,13 @@ const App: React.FC = () => {
   };
 
   const resetTree = () => {
-    debugger
-    setTree(initialTrees);
+    const newTreeRoot: TreeNodeType = {
+      id: 'root',
+      name: 'Root',
+      children: [],
+    };
+
+    setTree(newTreeRoot);
   };
 
   return (

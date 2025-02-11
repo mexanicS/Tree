@@ -19,14 +19,10 @@ const TreeNode: React.FC<TreeNodeProps> = ({ node, onAdd, onDelete, onEdit }) =>
   const [newName, setNewName] = useState(node.name);
 
   const handleAdd = () => {
-    const childName = prompt('Введите название нового элемента:');
-    if (childName) {
-      onAdd(node.id, childName);
-    }
+      onAdd(node.id, "name");
   };
 
   const handleDelete = () => {
-    debugger
     onDelete(node.id);
   };
 
@@ -35,6 +31,10 @@ const TreeNode: React.FC<TreeNodeProps> = ({ node, onAdd, onDelete, onEdit }) =>
   };
 
   const handleSave = () => {
+    if (newName.trim() === '') {
+      alert('Имя узла не может быть пустым');
+      return;
+    }
     onEdit(node.id, newName);
     setIsEditing(false);
   };
