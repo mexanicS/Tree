@@ -7,10 +7,13 @@
 .tree-node .controls {
     display: inline-block;
     margin-left: 10px;
+    white-space: nowrap;
 }
 
 .tree-node .controls button {
     margin-right: 5px;
+    min-width: 25px;
+    min-height: 25px;
 }
 
 .tree-node .children {

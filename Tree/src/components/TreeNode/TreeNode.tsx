@@ -4,7 +4,7 @@ import './TreeNode.css';
 type TreeNodeType = {
   id: string;
   name: string;
-  children?: TreeNodeType[];
+  children: TreeNodeType[];
 };
 
 type TreeNodeProps = {
